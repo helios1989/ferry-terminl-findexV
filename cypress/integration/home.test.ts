@@ -29,6 +29,8 @@ describe('baseUrl test home findex', () => {
           cy.get("#deleteAllLarge").click();
         }
       })
+
+    })
     it("should delete specific category when user click delete all in category", () => {
       cy.get("#getVehicle").click();
       cy.get("#vehicleCategory").then((d) => {
@@ -42,6 +44,5 @@ describe('baseUrl test home findex', () => {
           cy.get("#tableLargeRow").should("have.length", 0);
         }
       })
-    })
     })
   })

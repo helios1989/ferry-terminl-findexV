@@ -1,0 +1,10 @@
+<div>
+    <div>
+        <p>Vehicle Size: <span id="vehicleCategory">{{vehicle?.category}}</span></p>
+        <p>Vehicle Type: <span id="vehicleType">{{vehicle?.type}} </span> </p>
+        <p>Vehicle Cost: <span id="vehicleCost">{{vehicle?.cost | currency}} </span></p>
+    </div>
+    <div>
+        <button mat-raised-button color="secondary" id="loadVehicle" (click)="loadVehicle()">Load</button>
+    </div>
+</div>

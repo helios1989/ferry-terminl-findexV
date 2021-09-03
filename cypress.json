@@ -1,0 +1,15 @@
+{
+    "component": {
+      "testFiles": "./cypress/**/*.test.{js,ts,jsx,tsx}",
+      "componentFolder": "src"
+    },
+    "baseUrl": "http://localhost:4200",
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "sourceMap": false,
+        "outDir": "../../dist/out-tsc"
+    },
+    "include": [
+        "src/**/*.ts"
+    ]
+}

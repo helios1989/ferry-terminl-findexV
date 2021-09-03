@@ -1,0 +1,10 @@
+
+<div class="container">
+  <div class="vehicle-container">
+    <button mat-raised-button color="primary" id="getVehicle" (click)="getVehicle()">Get Vehicle</button>
+    <app-vehicle [vehicle]="currentVehicle" *ngIf="isNewVehicle"></app-vehicle>
+  </div>
+  <div class="wrapper terminal-ferry">
+    <app-ferry [ferries]="(ferries$ | async) || []" ></app-ferry>
+  </div>
+</div>

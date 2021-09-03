@@ -1,0 +1,11 @@
+:host {
+    padding: 20px;
+    border: 1px solid #ddd;
+    & > div {
+        display: flex;
+        flex-direction: row;
+        & > div {
+            padding: 0 30px;
+        }
+    }
+}

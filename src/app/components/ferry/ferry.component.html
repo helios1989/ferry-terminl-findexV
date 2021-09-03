@@ -1,0 +1,88 @@
+
+
+<div class="wrapper terminal-ferry">
+    <ng-container *ngTemplateOutlet="smallFerry"></ng-container>
+    <ng-container *ngTemplateOutlet="largeFerry"></ng-container>
+</div>
+
+<ng-template #smallFerry>
+    <div class="box">
+        <h3>Small Vehicle Category</h3>
+            <table   id="tableSmall" mat-table [dataSource]="smallCategory" class="mat-elevation-z8">
+
+                <!-- id Column -->
+                <ng-container matColumnDef="id">
+                  <th mat-header-cell *matHeaderCellDef> Id </th>
+                  <td mat-cell *matCellDef="let element"> {{element.id}}</td>
+                </ng-container>
+              
+                <!-- type Column -->
+                <ng-container matColumnDef="type">
+                  <th mat-header-cell *matHeaderCellDef> Vehicle Type </th>
+                  <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+                </ng-container>
+              
+                <!-- cost Column -->
+                <ng-container matColumnDef="cost">
+                  <th mat-header-cell *matHeaderCellDef> Cost </th>
+                  <td mat-cell *matCellDef="let element"> {{element.cost}} </td>
+                </ng-container>
+                <!-- cost Column -->
+                <ng-container matColumnDef="action">
+                  <th mat-header-cell *matHeaderCellDef> Action </th>
+                  <td mat-cell *matCellDef="let element">  
+                    <button mat-raised-button color="warn" id="delete" (click)="deleteById(element.id)">Delete</button>
+                  </td>
+                </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row  id="tableSmallRow" *matRowDef="let row; columns: displayedColumns;"></tr>
+             </table>
+             <div class="earnings">
+              <p> Terminal Earns: {{smallTerminalEarns | currency}}</p>
+              <p> Worker Earns: {{smallWorkerEarns | currency}}</p>
+              <button mat-raised-button color="warn" id="deleteAllSmall" (click)="deleteAllbyCategory('Small')">Delete All</button>
+             </div>
+    </div>
+</ng-template>
+<ng-template #largeFerry>
+    <div class="box">
+        <h3>Large Vehicle Category</h3>
+
+        <table  id="largeTable" mat-table [dataSource]="largeCategory" class="mat-elevation-z8">
+
+            <!-- id Column -->
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef> Id </th>
+              <td mat-cell *matCellDef="let element"> {{element.id}}</td>
+            </ng-container>
+          
+            <!-- type Column -->
+            <ng-container matColumnDef="type">
+              <th mat-header-cell *matHeaderCellDef> Vehicle Type </th>
+              <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+            </ng-container>
+          
+            <!-- cost Column -->
+            <ng-container matColumnDef="cost">
+              <th mat-header-cell *matHeaderCellDef> Cost </th>
+              <td mat-cell *matCellDef="let element"> {{element.cost}} </td>
+            </ng-container>
+            <ng-container matColumnDef="action">
+              <th mat-header-cell *matHeaderCellDef> Action </th>
+              <td mat-cell *matCellDef="let element">  
+                <button mat-raised-button color="warn" id=`delete${element.id}` (click)="deleteById(element.id)">Delete</button> 
+              </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row  id="tableLargeRow" *matRowDef="let row; columns: displayedColumns;"></tr>
+         </table>
+         <div class="earnings">
+          <p> Terminal Earns: {{largeTerminalEarns | currency}}</p>
+          <p> Worker Earns: {{largerWorkerEarns | currency}}</p>
+          <button mat-raised-button color="warn" id="deleteAllLarge" (click)="deleteAllbyCategory('Large')">Delete All</button>
+         </div>
+      
+    </div>
+</ng-template>
+

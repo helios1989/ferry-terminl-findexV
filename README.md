@@ -1,4 +1,4 @@
-### how to run the app locally
+# how to run the app locally
 - git clone https://github.com/helios1989/ferry-terminl-findexV
 - cd ferry-terminl-findexV
 - npm install 
@@ -11,7 +11,7 @@
 
 
 
-# just in case you have problem running this locally you can view the deployed app in azure:
+### just in case you have problem running this locally you can view the deployed app in azure:
 - https://findex-ferry-terminal.azurewebsites.net/
 - note this app might load slow as this is only free appservice in azure with the lowest memory
 

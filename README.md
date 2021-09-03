@@ -1,27 +1,17 @@
-# FindexTerminalFerry
+### how to run the app locally
+- git clone https://github.com/helios1989/ferry-terminl-findexV
+- cd ferry-terminl-findexV
+- npm install 
+- ng serve
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
+### how to run e2e automation testing
+- npx cypress open make sure localhost:4200 is open
+- posted below example ui automation testing
+![image](https://user-images.githubusercontent.com/14260407/131953849-8f4632f3-5e71-4274-b147-dc0aac21e6ce.png)
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# just in case you have problem running this locally you can view the deployed app in azure:
+- https://findex-ferry-terminal.azurewebsites.net/
+- note this app might load slow as this is only free appservice in azure with the lowest memory
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
